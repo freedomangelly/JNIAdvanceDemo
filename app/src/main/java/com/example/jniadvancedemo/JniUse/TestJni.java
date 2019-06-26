@@ -16,4 +16,12 @@ public class TestJni {
 
     public native Employee getEmployee(String name,double salary);
     public native String employeePrint(String name,double salary);
+
+    public native void bastTypeLog();
+
+    public native void random();
+
+    public native void clloc();
+
+    public native void cllocSize();
 }

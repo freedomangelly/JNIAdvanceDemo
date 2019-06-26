@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
 //        tv.setText(String.valueOf(jni.sum(100,99)));
 //        tv.setText(jni.getEmployee("hhh",1000.00).print());
         tv.setText(jni.employeePrint("hhh",1000.00));
+        jni.bastTypeLog();
+        jni.random();
+        String a="111";
+        String b=a+"";
 
     }
 

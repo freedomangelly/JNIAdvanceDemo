@@ -47,6 +47,38 @@ JNIEXPORT jobject JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_getEmpl
 JNIEXPORT jstring JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_employeePrint
   (JNIEnv *, jobject, jstring, jdouble);
 
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    bastTypeLog
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_bastTypeLog
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    random
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_random
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    clloc
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_clloc
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    cllocSize
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_cllocSize
+  (JNIEnv *, jobject);
+
 #ifdef __cplusplus
 }
 #endif
