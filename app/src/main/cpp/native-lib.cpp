@@ -3,7 +3,7 @@
 #include<android/log.h>
 #include "com_example_jniadvancedemo_JniUse_TestJni.h"
 #include <time.h>
-#include "stdlib.h"
+#include <stdlib.h>
 
 #define TAG "myDemo-jni" // 这个是自定义的LOG的标识
 
@@ -106,17 +106,32 @@ JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_bastTypeLo
  * Class:     com_example_jniadvancedemo_JniUse_TestJni
  * Method:    random
  * Signature: ()V
+ * 在谭大神的指导下编写
  */
 JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_random
-        (JNIEnv *, jobject){
+        (JNIEnv *env, jobject){
     srand((unsigned)time(NULL));
     int i;
+    int size=10;
     int arr[10];//静态开辟
-    for (i = 0; i<10; i++){
-        arr[i]=rand() % 100;
-        
+    char str[10+1+100]={0};
+//    char str[size];//最好不要用size开辟内存，这样不符合标准，初始化char右值最好{0}
+    char tmp[10]={0};
+    for (i = 0; i<size; i++){
+        arr[i]=rand() % 1000;
+        int randoms=arr[i];
+        if(i==size-1){
+            sprintf(tmp, "%d", randoms);
+        } else{
+            sprintf(tmp, "%d,", randoms);
+        }
+        LOGI("Java_com_example_jniadvancedemo_JniUse_TestJni_random %d\n", randoms);
+        strcat(str, tmp);
+        LOGI("Java_com_example_jniadvancedemo_JniUse_TestJni_random 11 %s==%s\n", str,tmp);
     }
-        LOGI("Java_com_example_jniadvancedemo_JniUse_TestJni_random %d ,%p\n", *arr ,arr);
+
+
+    LOGI("Java_com_example_jniadvancedemo_JniUse_TestJni_random!!! %s\n", str);
 }
 
 /*
