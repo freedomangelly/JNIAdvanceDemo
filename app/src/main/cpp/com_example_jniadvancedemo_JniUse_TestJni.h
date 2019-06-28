@@ -66,18 +66,58 @@ JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_random
 /*
  * Class:     com_example_jniadvancedemo_JniUse_TestJni
  * Method:    clloc
- * Signature: ()V
+ * Signature: (I[I)V
  */
 JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_clloc
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jint, jintArray);
 
 /*
  * Class:     com_example_jniadvancedemo_JniUse_TestJni
  * Method:    cllocSize
- * Signature: ()V
+ * Signature: (II)V
  */
 JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_cllocSize
+  (JNIEnv *, jobject, jint, jint);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    compress
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_compress
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    charTest
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_charTest
   (JNIEnv *, jobject);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    charLength
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_charLength
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    charChange
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_charChange
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    charEquals
+ * Signature: (Ljava/lang/String;Ljava/lang/String;)Z
+ */
+JNIEXPORT jboolean JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_charEquals
+  (JNIEnv *, jobject, jstring, jstring);
 
 #ifdef __cplusplus
 }

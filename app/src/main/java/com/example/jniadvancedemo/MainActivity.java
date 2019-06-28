@@ -23,11 +23,12 @@ public class MainActivity extends AppCompatActivity {
 //        tv.setText(String.valueOf(jni.sum(100,99)));
 //        tv.setText(jni.getEmployee("hhh",1000.00).print());
         tv.setText(jni.employeePrint("hhh",1000.00));
-        jni.bastTypeLog();
-        jni.random();
-        String a="111";
-        String b=a+"";
-
+//        jni.bastTypeLog();
+//        jni.random();
+//        int[] ints=new int[]{1,2,3,4,5,6,7,8,9,0};
+//        jni.clloc(ints.length,ints);
+//        jni.cllocSize(10,20);
+        jni.charEquals("ba","ba");
     }
 
     /**

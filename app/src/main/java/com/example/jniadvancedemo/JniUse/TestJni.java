@@ -21,7 +21,14 @@ public class TestJni {
 
     public native void random();
 
-    public native void clloc();
+    /***/
+    public native void clloc(int number ,int[] numbers);
 
-    public native void cllocSize();
+    public native void cllocSize(int num1,int num2);
+
+    public native void compress(String filePath);
+    public native void charTest();
+    public native void charLength();
+    public native void charChange();
+    public native boolean charEquals(String text1,String text2);
 }
