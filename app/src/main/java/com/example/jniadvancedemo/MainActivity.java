@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
 //        int[] ints=new int[]{1,2,3,4,5,6,7,8,9,0};
 //        jni.clloc(ints.length,ints);
 //        jni.cllocSize(10,20);
-        jni.charEquals("ba","ba");
+//        jni.charEquals("ba","ba");
+        jni.spiteFileWrite("/mnt/sdcard/1.jpg",1);
     }
 
     /**

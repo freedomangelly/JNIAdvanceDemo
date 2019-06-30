@@ -119,6 +119,30 @@ JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_charChange
 JNIEXPORT jboolean JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_charEquals
   (JNIEnv *, jobject, jstring, jstring);
 
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    copyFile
+ * Signature: (Ljava/lang/String;Ljava/lang/String;)Z
+ */
+JNIEXPORT jboolean JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_copyFile
+  (JNIEnv *, jobject, jstring, jstring);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    getFileSize
+ * Signature: (Ljava/lang/String;)J
+ */
+JNIEXPORT jlong JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_getFileSize
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     com_example_jniadvancedemo_JniUse_TestJni
+ * Method:    spiteFileWrite
+ * Signature: (Ljava/lang/String;I)V
+ */
+JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_spiteFileWrite
+  (JNIEnv *, jobject, jstring, jint);
+
 #ifdef __cplusplus
 }
 #endif

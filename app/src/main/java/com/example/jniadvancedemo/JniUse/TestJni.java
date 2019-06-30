@@ -31,4 +31,8 @@ public class TestJni {
     public native void charLength();
     public native void charChange();
     public native boolean charEquals(String text1,String text2);
+
+    public native boolean copyFile(String srcFile,String destFile);
+    public native long  getFileSize(String file);
+    public native void spiteFileWrite(String filepath,int siplt);
 }
