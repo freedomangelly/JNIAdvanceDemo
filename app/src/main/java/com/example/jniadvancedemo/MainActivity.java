@@ -2,8 +2,10 @@ package com.example.jniadvancedemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
+import com.example.jniadvancedemo.JniUse.Struct;
 import com.example.jniadvancedemo.JniUse.TestJni;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,17 +21,20 @@ public class MainActivity extends AppCompatActivity {
         // Example of a call to a native method
         TextView tv = findViewById(R.id.sample_text);
         TestJni jni=new TestJni();
+        Struct struct=new Struct();
+        Log.i("info","start==");
+        Log.i("info","struct.tostring="+struct.StructToString());
 //        tv.setText(TestJni.stringFromJNI2());
 //        tv.setText(String.valueOf(jni.sum(100,99)));
 //        tv.setText(jni.getEmployee("hhh",1000.00).print());
-        tv.setText(jni.employeePrint("hhh",1000.00));
+//        tv.setText(jni.employeePrint("hhh",1000.00));
 //        jni.bastTypeLog();
 //        jni.random();
 //        int[] ints=new int[]{1,2,3,4,5,6,7,8,9,0};
 //        jni.clloc(ints.length,ints);
 //        jni.cllocSize(10,20);
 //        jni.charEquals("ba","ba");
-        jni.spiteFileWrite("/mnt/sdcard/1.jpg",1);
+//        jni.spiteFileWrite("/mnt/sdcard/1.jpg",1);
     }
 
     /**

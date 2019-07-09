@@ -457,7 +457,7 @@ JNIEXPORT void JNICALL Java_com_example_jniadvancedemo_JniUse_TestJni_spiteFileW
     for (; i < 3; i++)
     {
         file_names[i] = (char*)malloc(sizeof(char)*100);// '\0'
-        sprintf(file_names[i], addCharToPath(*file_names,i));
+//        sprintf(file_names[i], addCharToPath(*file_names,i));
 
         printf("%s\n", file_names[i]);
     }
